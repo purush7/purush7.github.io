@@ -1,1 +1,1 @@
-# purush7.io
+# purush7.github.io
