@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Your site title</title>
+    <title>Tags on purush7</title>
     <link>https://purush7.github.io/tags/</link>
-    <description>Recent content in Tags on Your site title</description>
+    <description>Recent content in Tags on purush7</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://purush7.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jun 2022 06:29:34 +0530</lastBuildDate><atom:link href="https://purush7.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>interview</title>
+      <link>https://purush7.github.io/tags/interview/</link>
+      <pubDate>Thu, 30 Jun 2022 06:29:34 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/tags/interview/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>My Job application experiences</title>
+      <link>https://purush7.github.io/tags/my-job-application-experiences/</link>
+      <pubDate>Thu, 30 Jun 2022 06:29:34 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/tags/my-job-application-experiences/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>samsung</title>
+      <link>https://purush7.github.io/tags/samsung/</link>
+      <pubDate>Thu, 30 Jun 2022 06:29:34 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/tags/samsung/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>SRIB</title>
+      <link>https://purush7.github.io/tags/srib/</link>
+      <pubDate>Thu, 30 Jun 2022 06:29:34 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/tags/srib/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>
