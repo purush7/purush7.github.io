@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Javascript_tutorial :: purush7</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="My notes for learning javascript quickly" />
+<meta name="keywords" content="javascript, tutorial, notes, learn javascript" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://purush7.github.io/posts/javascript_tutorial/" />
+
+
+
+
+<link rel="stylesheet" href="https://purush7.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://purush7.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://purush7.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://purush7.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Javascript_tutorial">
+<meta property="og:description" content="My notes for learning javascript quickly" />
+<meta property="og:url" content="https://purush7.github.io/posts/javascript_tutorial/" />
+<meta property="og:site_name" content="purush7" />
+
+  <meta property="og:image" content="https://purush7.github.io/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2022-06-30 13:54:41 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Home
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://purush7.github.io/posts/javascript_tutorial/">Javascript_tutorial</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2022-06-30
+        
+      </span>
+    
+    
+      <span class="post-author">:: purush7</span>
+    
+    
+      <span class="post-reading-time">:: 3 min read (465 words)</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://purush7.github.io/tags/tutorial/">tutorial</a>&nbsp;
+    
+    #<a href="https://purush7.github.io/tags/javascript/">javascript</a>&nbsp;
+    
+    #<a href="https://purush7.github.io/tags/notes/">notes</a>&nbsp;
+    
+  </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Javascript was only used in browsers to build interactive sites.
+Dahl build a cpp program which is present in chrome as v8 engine to run javascript and it is called
+as node</p>
+<p>To run js on browser
+<code>browser-&gt;inspect-&gt;console</code></p>
+<p>To printout the statements</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello&#34;</span>,<span style="color:#e6db74">&#34;World&#34;</span>);
+</code></pre></div><p>The variables are created by <code>var</code> or <code>let</code> keyword
+Scope of var is functional
+Scope of let is block {}</p>
+<p>constants can be created by <code>const</code> keyword</p>
+<p>Types of variables:</p>
+<ul>
+<li>Primitive Types
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>null (to mark the variable as empty)</li>
+<li>undefined (default type if the value of variable isn&rsquo;t defined)</li>
+</ul>
+</li>
+<li>Reference Types
+<ul>
+<li>Object</li>
+<li>Array</li>
+<li>Functions</li>
+</ul>
+</li>
+</ul>
+<p>To know the type of a variable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">color</span>);
+</code></pre></div><p>Object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+</code></pre></div><p>Arrays:
+In js, arrays functions as stack,queue and lists. Addressing uses zero-based indices. Arrays in JS
+are sparse, meaning that we can also assign variables to random locations even though prev cells
+were undefined. It can have elements with different types.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myArray</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myArray</span>[<span style="color:#ae81ff">0</span>]);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr1</span> <span style="color:#f92672">=</span> [<span style="color:#66d9ef">undefined</span>, <span style="color:#66d9ef">undefined</span>, <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;hello&#34;</span>];
+</code></pre></div><p>Stacks,Queues,Lists:</p>
+<p>Arrays has <code>push</code>,<code>pop</code>,<code>shift</code>and<code>unshift</code> methods.</p>
+<p>push -&gt; inserts at the end of the array
+pop  -&gt; removes at the end of the array
+shift -&gt; inserts at the start of the array
+unshift -&gt; removes at the start of the array</p>
+<p>By using push,pop or shift,unshift arrays can behave as stacks
+With push,shift or unshift,pop it can behave as queues</p>
+<p>Splicing:</p>
+<p>In JS, we can split the array into two by using splice</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">child</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">splice</span>(<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">5</span>); <span style="color:#75715e">// startingIndex, length of child array
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">child</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">arr</span>);
+</code></pre></div><p>Operators:</p>
+<p>Addition operator (+):
+It is used to add numbers and also for concatenation of strings.
+If + is used in b/w string and other data type, then other data type is converted into string
+<code>js var a =1,b=2; var c = a=b; var name = &quot;John&quot;; console.log(&quot;Hello &quot;+name); //Hello John console.log(&quot;hey &quot;+34); // hey 34 </code>
+Similarly -,*,/,% are for subtraction, multiplication, division and modulus
+JS also supports combination of above operators with equal i.e +=, -=, *=, /=,%=</p>
+<p>JS has <code>Math</code> module which contains
+-   Math.abs (absolute value)
+-   Math.exp (calculates e to the power)
+-   Math.pow(x,y) (calculates the result of x to the power of y)
+-   Math.floor removes the fraction part from the number
+-   Math.random() will give a random number x where 0&lt;=x&lt;1</p>
+<p>Conditions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">true</span>);
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">false</span>);
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>); <span style="color:#75715e">//true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span>); <span style="color:#75715e">//false compares types along with the values (strict comparision)
+</span></code></pre></div><p>comparision: ==, ===, &gt;,&lt;,!,||,&amp;&amp;</p>
+<p>Switch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">rank</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Commander&#34;</span>;
+<span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">rank</span>)
+{
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Private&#34;</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Sergeant&#34;</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;You are not authorized.&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Commander&#34;</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello commander! what can I do for you today?&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;Captain&#34;</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello captain! I will do anything you wish.&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;I don&#39;t know what your rank is.&#34;</span>);
+        <span style="color:#66d9ef">break</span>;
+}
+</code></pre></div><p>Loops:</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://purush7.github.io/posts/samsung_hiring_experience/">
+                <span class="button__text">SRIB interview experience</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+  
+
+  
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2022 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://purush7.github.io/assets/main.js"></script>
+<script src="https://purush7.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

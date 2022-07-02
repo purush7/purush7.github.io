@@ -24,13 +24,13 @@ He called me on behalf of Samsung Research and Development Institute of Bangalor
 interested in my naukri profile.&lt;/p&gt;
 &lt;p&gt;They conducted the test on 18th June. I did just average, some of the testcases
 didn&amp;rsquo;t pass TLE :( (I don&amp;rsquo;t remember the time and memory constraints)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Given the set of rod lengths (duplicates are allowed). I need to find two disjoint
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Given the set of rod lengths (duplicates are allowed). I need to find two disjoint
 subsets with same sum and need to maximize the sum. I just need to output the maximum
 sum.
 Example:  {1,2,3,4}. The subsets can be {1,3} and {4}; {1,4} and {2,3}. 
 Here output should be 5
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;They gave me a chance to retake the test on 25th June. This time, I have cleared the test:)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Assume Top-left corner as 0,0 and x-axis on horizontal and y-axis vertically.
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Assume Top-left corner as 0,0 and x-axis on horizontal and y-axis vertically.
 The input will be the n plot co-ordinates(top left corner and bottom right). Here all
 the plots are in rectangle shape and they may share the same edge but there won&#39;t be 
 any overlapping area. We need to find the maximum possible square plot size that can 
@@ -39,12 +39,12 @@ i)    There shouldn&#39;t be any area inside the square which isn&#39;t among th
 ii)   There shouldn&#39;t be any plot such that only a part of it is inside the square.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Finally, I got an amazon voucher worth of 5000 for clearing the test and a suprise interview on 29th
 June.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Asked me about JS
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;- Asked me about JS
 - OOP
 - Implementing Stack using Linked list
 - My work experience at previous companies
 - Data Structures Stack vs queue, hashmap vs trie, array vs linkedlist ....
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result: Passed&lt;/p&gt;
 &lt;p&gt;It seems the JS is mandatory for the role, there are interviewing and I didn&amp;rsquo;t have much experience.
 I asked the recuriter before the interview about the JD and he didn&amp;rsquo;t shared it and said he too
 didn&amp;rsquo;t know. The role I was interviewed is for Voice Intelligence team(I asked the interviewer at
@@ -54,6 +54,20 @@ end of interview)&lt;/p&gt;
 &lt;li&gt;Should know the JD well&lt;/li&gt;
 &lt;li&gt;Mock Interview (would have improved my performance)&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Then recruiter called me on 30th June and he scheduled a meet on 1st July with HR. I expected the
+meet will be on behaviorial,my work experience, discussing about package, and the joining date.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;- Asked me about my work experiences
+- Issues I faced in my prev work
+- 3 Toughest challengers I faced in work
+- 3 things I liked in my prev company
+- My proudest moment in my prev company
+- My career goals and interests
+- Higher Education
+- When can I join?
+- Expected package?
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;p&gt;It seems it went well, atleast I am statisfied with it.&lt;/p&gt;
+&lt;p&gt;Finally, the recruiter called me on&lt;/p&gt;
 </content>
     </item>
     
