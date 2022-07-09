@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>break on purush7</title>
+    <link>https://purush7.github.io/tags/break/</link>
+    <description>Recent content in break on purush7</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jul 2022 00:16:54 +0530</lastBuildDate><atom:link href="https://purush7.github.io/tags/break/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>interviews_after_break</title>
+      <link>https://purush7.github.io/posts/interviews_after_break/</link>
+      <pubDate>Sat, 09 Jul 2022 00:16:54 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/interviews_after_break/</guid>
+      <description>Hey,
+I have started this blog to log my interview experiences especially after having a break. I had 5 months break in my career. You can find more details about my work experience in another blog. I also found a better way to get referrals and news about job openings in better companies. More about this at the end of this blog.
+The order of Interviews I attended:
+Samsung Research and Development Institute Of Bangalore: There is an entire blog on it, you can find it here</description>
+      <content>&lt;p&gt;Hey,&lt;/p&gt;
+&lt;p&gt;I have started this blog to log my interview experiences especially after having a break. I had 5
+months break in my career. You can find more details about my work experience in another blog. I
+also found a better way to get referrals and news about job openings in better companies. More about
+this at the end of this blog.&lt;/p&gt;
+&lt;p&gt;The order of Interviews I attended:&lt;/p&gt;
+&lt;h3 id=&#34;samsung-research-and-development-institute-of-bangalore&#34;&gt;Samsung Research and Development Institute Of Bangalore:&lt;/h3&gt;
+&lt;p&gt;There is an entire blog on it, you can find it
+&lt;a href=&#34;https://purush7.github.io/posts/samsung_hiring_experience/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;credavenue-yubi&#34;&gt;CredAvenue (Yubi):&lt;/h3&gt;
+&lt;p&gt;One day a staff from &lt;code&gt;intervue.io&lt;/code&gt; contacted me and describe me about the role, asked whether I am
+interested or not. He saw my profile on naukri. He scheduled a interview&lt;/p&gt;
+&lt;h4 id=&#34;coding-round&#34;&gt;Coding Round:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;- Few problems on trees
+- I am able to solve it and he asked few questions on trees.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result: Passed&lt;/p&gt;
+&lt;p&gt;The recruiter on behalf of yubi scheduled another interview. He mentioned that it will on LLD,
+work-experience, coding&lt;/p&gt;
+&lt;h4 id=&#34;tech-interview&#34;&gt;Tech Interview:&lt;/h4&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;h3 id=&#34;shardeum&#34;&gt;Shardeum:&lt;/h3&gt;
+&lt;p&gt;Similarly like &lt;code&gt;Yubi&lt;/code&gt;, but this time it is from &lt;code&gt;ultragenius&lt;/code&gt;. &lt;code&gt;Shardeum&lt;/code&gt; is on &lt;code&gt;web3&lt;/code&gt; platform
+which I am not interested. As it isn&amp;rsquo;t stable and which help green revolution.&lt;/p&gt;
+&lt;p&gt;But I just want to attend the interview for practise sake.&lt;/p&gt;
+&lt;h4 id=&#34;meet-with-ultragenius&#34;&gt;Meet with Ultragenius:&lt;/h4&gt;
+&lt;p&gt;She describe the role and responsbilities. She also gave information about the whole process and
+prerequisities needed. I clearly understood, it doesn&amp;rsquo;t fit to me.&lt;/p&gt;
+&lt;h4 id=&#34;meet-with-shardeum&#34;&gt;Meet with Shardeum:&lt;/h4&gt;
+&lt;p&gt;This is a introductory call from shardeum to explain more about the company and to know my
+work-experiences basically more about me.&lt;/p&gt;
+&lt;h3 id=&#34;finboxai&#34;&gt;Finbox.ai:&lt;/h3&gt;
+&lt;p&gt;Similar fashion,&lt;/p&gt;
+&lt;h4 id=&#34;coding-interview&#34;&gt;Coding Interview:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Need to arrange the elements in the array according to freq in decreasing order and 
+if the freq is same then the order should be similar to orginal order.
+
+input:  [5, 2, 3, 3, 2, 4, 2, -1]
+output: [2, 2, 2, 3, 3, 5, 4, -1]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I solved it and he asked the time complexity,testcases, test function&lt;/p&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;h3 id=&#34;qube-cinemas&#34;&gt;Qube Cinemas:&lt;/h3&gt;
+&lt;p&gt;I have applied it on LinkedIn for golang backend role. The recruter sent a mail with the assesment
+of deadline 1 week(better to complete ASAP)&lt;/p&gt;
+&lt;p&gt;The assement is &lt;a href=&#34;https://github.com/purush7/challenge2019&#34;&gt;here&lt;/a&gt;.
+Solution is in &lt;code&gt;v1&lt;/code&gt; branch (refer &lt;code&gt;Usage.md&lt;/code&gt; in &lt;code&gt;v1&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;h3 id=&#34;platforms&#34;&gt;Platforms:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Naukri&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;Almaconnect (Best as you will get referrals along with the new opening news, also quick hiring
+process, you also get the news earlier than naukri and LinkedIn)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
