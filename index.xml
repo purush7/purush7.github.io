@@ -6,70 +6,68 @@
     <description>Recent content on purush7</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jul 2022 00:16:54 +0530</lastBuildDate><atom:link href="https://purush7.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 15:06:14 +0530</lastBuildDate><atom:link href="https://purush7.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>interviews_after_break</title>
-      <link>https://purush7.github.io/posts/interviews_after_break/</link>
-      <pubDate>Sat, 09 Jul 2022 00:16:54 +0530</pubDate>
+      <title>Macros</title>
+      <link>https://purush7.github.io/posts/macros/</link>
+      <pubDate>Sun, 10 Jul 2022 15:06:14 +0530</pubDate>
       
-      <guid>https://purush7.github.io/posts/interviews_after_break/</guid>
+      <guid>https://purush7.github.io/posts/macros/</guid>
       <description>Hey,
-I have started this blog to log my interview experiences especially after having a break. I had 5 months break in my career. You can find more details about my work experience in another blog. I also found a better way to get referrals and news about job openings in better companies. More about this at the end of this blog.
-The order of Interviews I attended:
-Samsung Research and Development Institute Of Bangalore: There is an entire blog on it, you can find it here</description>
+In my cpp template, I use to have ONLINE_JUDGE macro like others for input,output in local development. But, today I discovered there is a better way of using it like having a macro Local. So that the behaviour will be local to my setup then to expect any site to support the ONLINE_JUDGE macro.
+Few tips along the way too
+The syntax for macros is
+# define Area(l,b)(l*b) Macros is preproccessed before compiler compiles the source code.</description>
       <content>&lt;p&gt;Hey,&lt;/p&gt;
-&lt;p&gt;I have started this blog to log my interview experiences especially after having a break. I had 5
-months break in my career. You can find more details about my work experience in another blog. I
-also found a better way to get referrals and news about job openings in better companies. More about
-this at the end of this blog.&lt;/p&gt;
-&lt;p&gt;The order of Interviews I attended:&lt;/p&gt;
-&lt;h3 id=&#34;samsung-research-and-development-institute-of-bangalore&#34;&gt;Samsung Research and Development Institute Of Bangalore:&lt;/h3&gt;
-&lt;p&gt;There is an entire blog on it, you can find it
-&lt;a href=&#34;https://purush7.github.io/posts/samsung_hiring_experience/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;credavenue-yubi&#34;&gt;CredAvenue (Yubi):&lt;/h3&gt;
-&lt;p&gt;One day a staff from &lt;code&gt;intervue.io&lt;/code&gt; contacted me and describe me about the role, asked whether I am
-interested or not. He saw my profile on naukri. He scheduled a interview&lt;/p&gt;
-&lt;h4 id=&#34;coding-round&#34;&gt;Coding Round:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;- Few problems on trees
-- I am able to solve it and he asked few questions on trees.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result: Passed&lt;/p&gt;
-&lt;p&gt;The recruiter on behalf of yubi scheduled another interview. He mentioned that it will on LLD,
-work-experience, coding&lt;/p&gt;
-&lt;h4 id=&#34;tech-interview&#34;&gt;Tech Interview:&lt;/h4&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;h3 id=&#34;shardeum&#34;&gt;Shardeum:&lt;/h3&gt;
-&lt;p&gt;Similarly like &lt;code&gt;Yubi&lt;/code&gt;, but this time it is from &lt;code&gt;ultragenius&lt;/code&gt;. &lt;code&gt;Shardeum&lt;/code&gt; is on &lt;code&gt;web3&lt;/code&gt; platform
-which I am not interested. As it isn&amp;rsquo;t stable and which help green revolution.&lt;/p&gt;
-&lt;p&gt;But I just want to attend the interview for practise sake.&lt;/p&gt;
-&lt;h4 id=&#34;meet-with-ultragenius&#34;&gt;Meet with Ultragenius:&lt;/h4&gt;
-&lt;p&gt;She describe the role and responsbilities. She also gave information about the whole process and
-prerequisities needed. I clearly understood, it doesn&amp;rsquo;t fit to me.&lt;/p&gt;
-&lt;h4 id=&#34;meet-with-shardeum&#34;&gt;Meet with Shardeum:&lt;/h4&gt;
-&lt;p&gt;This is a introductory call from shardeum to explain more about the company and to know my
-work-experiences basically more about me.&lt;/p&gt;
-&lt;h3 id=&#34;finboxai&#34;&gt;Finbox.ai:&lt;/h3&gt;
-&lt;p&gt;Similar fashion,&lt;/p&gt;
-&lt;h4 id=&#34;coding-interview&#34;&gt;Coding Interview:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;Need to arrange the elements in the array according to freq in decreasing order and 
-if the freq is same then the order should be similar to orginal order.
-
-input:  [5, 2, 3, 3, 2, 4, 2, -1]
-output: [2, 2, 2, 3, 3, 5, 4, -1]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I solved it and he asked the time complexity,testcases, test function&lt;/p&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;h3 id=&#34;qube-cinemas&#34;&gt;Qube Cinemas:&lt;/h3&gt;
-&lt;p&gt;I have applied it on LinkedIn for golang backend role. The recruter sent a mail with the assesment
-of deadline 1 week(better to complete ASAP)&lt;/p&gt;
-&lt;p&gt;The assement is &lt;a href=&#34;https://github.com/purush7/challenge2019&#34;&gt;here&lt;/a&gt;.
-Solution is in &lt;code&gt;v1&lt;/code&gt; branch (refer &lt;code&gt;Usage.md&lt;/code&gt; in &lt;code&gt;v1&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;Result:&lt;/p&gt;
-&lt;h3 id=&#34;platforms&#34;&gt;Platforms:&lt;/h3&gt;
+&lt;p&gt;In my cpp template, I use to have &lt;code&gt;ONLINE_JUDGE&lt;/code&gt; macro like others for input,output in local
+development. But, today I discovered there is a better way of using it like having a macro
+&lt;em&gt;&lt;code&gt;Local&lt;/code&gt;&lt;/em&gt;. So that the behaviour will be local to my setup then to expect any site to support the
+&lt;code&gt;ONLINE_JUDGE&lt;/code&gt; macro.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Few tips along the way too&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The syntax for macros is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# define Area(l,b)(l*b)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Macros is preproccessed before compiler compiles the source code. Macros helps in reducing the
+redundancy. It&amp;rsquo;s also useful if the program needs to execute differently in different environment
+i.e output and execution depending on the environment&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Naukri&lt;/li&gt;
-&lt;li&gt;LinkedIn&lt;/li&gt;
-&lt;li&gt;Almaconnect (Best as you will get referrals along with the new opening news, also quick hiring
-process, you also get the news earlier than naukri and LinkedIn)&lt;/li&gt;
+&lt;li&gt;As we use &lt;code&gt;ONLINE_JUDGE&lt;/code&gt; to differentiate the sites and local.&lt;/li&gt;
+&lt;li&gt;Depending on the OS&lt;/li&gt;
+&lt;li&gt;To reduce the redudancy like area(l,b); (But I think l*b is better than Area(l,b) for CP)&lt;/li&gt;
+&lt;li&gt;But &lt;code&gt;MIN(x,y)(x&amp;lt;y?x:y)&lt;/code&gt; is better than using &lt;code&gt;min(x,y)&lt;/code&gt;. As in the latter, we need to have x and
+y types as int.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Macros to have in CP template:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define MIN(x,y) (x&amp;lt;y?x:y)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define MAX(x,y) (x&amp;gt;y?x:y)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define DEBUG(str) (cout&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;str&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;endl)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+&lt;span style=&#34;color:#75715e&#34;&gt;#ifdef LOCAL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    freopen(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;in&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;r&amp;#34;&lt;/span&gt;,stdin);
+    freopen(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;out&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;w&amp;#34;&lt;/span&gt;,stdout);
+&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;//code
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Macros for development:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define DEBUG(str) (cout&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;str&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;endl)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ff&lt;/span&gt;(){
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#ifdef DEBUGMODE
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    cerr&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entered into ff&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;//LOGIC
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#ifdef DEBUGMODE
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    cerr&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Exiting from ff&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally I have added the above lines in my CP template.&lt;/p&gt;
 </content>
     </item>
     
@@ -116,8 +114,6 @@ Scope of let is block {}&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;To know the type of a variable:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Object:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Arrays:
 In js, arrays functions as stack,queue and lists. Addressing uses zero-based indices. Arrays in JS
 are sparse, meaning that we can also assign variables to random locations even though prev cells
@@ -128,11 +124,13 @@ were undefined. It can have elements with different types.&lt;/p&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;undefined&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;undefined&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;];
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Stacks,Queues,Lists:&lt;/p&gt;
 &lt;p&gt;Arrays has &lt;code&gt;push&lt;/code&gt;,&lt;code&gt;pop&lt;/code&gt;,&lt;code&gt;shift&lt;/code&gt;and&lt;code&gt;unshift&lt;/code&gt; methods.&lt;/p&gt;
-&lt;p&gt;push -&amp;gt; inserts at the end of the array
-pop  -&amp;gt; removes at the end of the array
-shift -&amp;gt; inserts at the start of the array
-unshift -&amp;gt; removes at the start of the array&lt;/p&gt;
-&lt;p&gt;By using push,pop or shift,unshift arrays can behave as stacks
+&lt;ul&gt;
+&lt;li&gt;push -&amp;gt; inserts at the end of the array&lt;/li&gt;
+&lt;li&gt;pop  -&amp;gt; removes at the end of the array&lt;/li&gt;
+&lt;li&gt;shift -&amp;gt; inserts at the start of the array&lt;/li&gt;
+&lt;li&gt;unshift -&amp;gt; removes at the start of the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By using push,pop or shift,unshift arrays can behave as stacks.
 With push,shift or unshift,pop it can behave as queues&lt;/p&gt;
 &lt;p&gt;Splicing:&lt;/p&gt;
 &lt;p&gt;In JS, we can split the array into two by using splice&lt;/p&gt;
@@ -181,81 +179,14 @@ JS also supports combination of above operators with equal i.e +=, -=, *=, /=,%=
         &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;I don&amp;#39;t know what your rank is.&amp;#34;&lt;/span&gt;);
         &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Loops:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;lt;&lt;em&gt;To Be Continued&lt;/em&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;Loops:&lt;/p&gt;
+&lt;p&gt;Object:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Async-Await:&lt;/p&gt;
+&lt;p&gt;promises &amp;hellip;etc&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.learn-js.org/&#34;&gt;src&lt;/a&gt;&lt;/p&gt;
 </content>
-    </item>
-    
-    <item>
-      <title>SRIB interview experience</title>
-      <link>https://purush7.github.io/posts/samsung_hiring_experience/</link>
-      <pubDate>Thu, 30 Jun 2022 06:29:34 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/samsung_hiring_experience/</guid>
-      <description>Hi,
-Today, I want to share the whole interview process of SRIB, I went through.
-It started in June 2022 with a call from a 3rd party consultant after a long break. He called me on behalf of Samsung Research and Development Institute of Bangalore. He was interested in my naukri profile.
-They conducted the test on 18th June. I did just average, some of the testcases didn&amp;rsquo;t pass TLE :( (I don&amp;rsquo;t remember the time and memory constraints)</description>
-      <content>&lt;p&gt;Hi,&lt;/p&gt;
-&lt;p&gt;Today, I want to share the whole interview process of SRIB, I went through.&lt;/p&gt;
-&lt;p&gt;It started in June 2022 with a call from a 3rd party consultant after a long break.
-He called me on behalf of Samsung Research and Development Institute of Bangalore. He was
-interested in my naukri profile.&lt;/p&gt;
-&lt;p&gt;They conducted the test on 18th June. I did just average, some of the testcases
-didn&amp;rsquo;t pass TLE :( (I don&amp;rsquo;t remember the time and memory constraints)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Given the set of rod lengths (duplicates are allowed). I need to find two disjoint
-subsets with same sum and need to maximize the sum. I just need to output the maximum
-sum.
-Example:  {1,2,3,4}. The subsets can be {1,3} and {4}; {1,4} and {2,3}. 
-Here output should be 5
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;They gave me a chance to retake the test on 25th June. This time, I have cleared the test:)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Assume Top-left corner as 0,0 and x-axis on horizontal and y-axis vertically.
-The input will be the n plot co-ordinates(top left corner and bottom right). Here all
-the plots are in rectangle shape and they may share the same edge but there won&#39;t be 
-any overlapping area. We need to find the maximum possible square plot size that can 
-be formed by these n plots such that
-i)    There shouldn&#39;t be any area inside the square which isn&#39;t among the n plots.
-ii)   There shouldn&#39;t be any plot such that only a part of it is inside the square.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Finally, I got an amazon voucher worth of 5000 for clearing the test and a suprise interview on 29th
-June.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Asked me about JS
-- OOP
-- Implementing Stack using Linked list
-- My work experience at previous companies
-- Data Structures Stack vs queue, hashmap vs trie, array vs linkedlist ....
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result: Passed&lt;/p&gt;
-&lt;p&gt;It seems the JS is mandatory for the role, there are interviewing and I didn&amp;rsquo;t have much experience.
-I asked the recuriter before the interview about the JD and he didn&amp;rsquo;t shared it and said he too
-didn&amp;rsquo;t know. The role I was interviewed is for Voice Intelligence team(I asked the interviewer at
-end of interview)&lt;/p&gt;
-&lt;p&gt;Take-aways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Should know the JD well&lt;/li&gt;
-&lt;li&gt;Mock Interview (would have improved my performance)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Then recruiter called me on 30th June and he scheduled a meet on 1st July with HR. I expected the
-meet will be on behaviorial,my work experience, discussing about package, and the joining date.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Asked me about my work experiences
-- Issues I faced in my prev work
-- 3 Toughest challengers I faced in work
-- 3 things I liked in my prev company
-- My proudest moment in my prev company
-- My career goals and interests
-- Higher Education
-- When can I join?
-- Expected package?
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Result: Passed&lt;/p&gt;
-&lt;p&gt;It seems it went well, atleast I am statisfied with it.&lt;/p&gt;
-&lt;p&gt;Finally, the recruiter called me on 4th July and scheduled an interview with &lt;code&gt;Voice Intelligence&lt;/code&gt;
-Team Director on 5th July.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;- Asked about my work experiences
-- My interests and domain I like
-- Describe the role and the responsibilities
-- He thought my interests won&#39;t allign with the role and said he will let me know  
-after some internal discussion with the team.
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Finally I was &lt;code&gt;ghosted&lt;/code&gt;. The recruiter should have shared the JD and he should have given the choice
-as there are many teams which are hiring inside SRIB. Thanks to the recruiter, now I am not able to
-reach them.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content>
     </item>
     
   </channel>

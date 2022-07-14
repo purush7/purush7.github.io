@@ -5,6 +5,37 @@
     <link>https://purush7.github.io/categories/</link>
     <description>Recent content in Categories on purush7</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://purush7.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Jul 2022 15:06:14 +0530</lastBuildDate><atom:link href="https://purush7.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>articles</title>
+      <link>https://purush7.github.io/categories/articles/</link>
+      <pubDate>Sun, 10 Jul 2022 15:06:14 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/categories/articles/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>cpp</title>
+      <link>https://purush7.github.io/categories/cpp/</link>
+      <pubDate>Sun, 10 Jul 2022 15:06:14 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/categories/cpp/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>good_to_know</title>
+      <link>https://purush7.github.io/categories/good_to_know/</link>
+      <pubDate>Sun, 10 Jul 2022 15:06:14 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/categories/good_to_know/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
   </channel>
 </rss>

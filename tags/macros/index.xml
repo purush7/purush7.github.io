@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macros on purush7</title>
+    <link>https://purush7.github.io/tags/macros/</link>
+    <description>Recent content in macros on purush7</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Jul 2022 15:06:14 +0530</lastBuildDate><atom:link href="https://purush7.github.io/tags/macros/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macros</title>
+      <link>https://purush7.github.io/posts/macros/</link>
+      <pubDate>Sun, 10 Jul 2022 15:06:14 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/macros/</guid>
+      <description>Hey,
+In my cpp template, I use to have ONLINE_JUDGE macro like others for input,output in local development. But, today I discovered there is a better way of using it like having a macro Local. So that the behaviour will be local to my setup then to expect any site to support the ONLINE_JUDGE macro.
+Few tips along the way too
+The syntax for macros is
+# define Area(l,b)(l*b) Macros is preproccessed before compiler compiles the source code.</description>
+      <content>&lt;p&gt;Hey,&lt;/p&gt;
+&lt;p&gt;In my cpp template, I use to have &lt;code&gt;ONLINE_JUDGE&lt;/code&gt; macro like others for input,output in local
+development. But, today I discovered there is a better way of using it like having a macro
+&lt;em&gt;&lt;code&gt;Local&lt;/code&gt;&lt;/em&gt;. So that the behaviour will be local to my setup then to expect any site to support the
+&lt;code&gt;ONLINE_JUDGE&lt;/code&gt; macro.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Few tips along the way too&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The syntax for macros is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# define Area(l,b)(l*b)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Macros is preproccessed before compiler compiles the source code. Macros helps in reducing the
+redundancy. It&amp;rsquo;s also useful if the program needs to execute differently in different environment
+i.e output and execution depending on the environment&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As we use &lt;code&gt;ONLINE_JUDGE&lt;/code&gt; to differentiate the sites and local.&lt;/li&gt;
+&lt;li&gt;Depending on the OS&lt;/li&gt;
+&lt;li&gt;To reduce the redudancy like area(l,b); (But I think l*b is better than Area(l,b) for CP)&lt;/li&gt;
+&lt;li&gt;But &lt;code&gt;MIN(x,y)(x&amp;lt;y?x:y)&lt;/code&gt; is better than using &lt;code&gt;min(x,y)&lt;/code&gt;. As in the latter, we need to have x and
+y types as int.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Macros to have in CP template:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define MIN(x,y) (x&amp;lt;y?x:y)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define MAX(x,y) (x&amp;gt;y?x:y)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define DEBUG(str) (cout&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;str&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;endl)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+&lt;span style=&#34;color:#75715e&#34;&gt;#ifdef LOCAL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    freopen(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;in&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;r&amp;#34;&lt;/span&gt;,stdin);
+    freopen(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;out&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;w&amp;#34;&lt;/span&gt;,stdout);
+&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;//code
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Macros for development:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define DEBUG(str) (cout&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;str&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;endl)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ff&lt;/span&gt;(){
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#ifdef DEBUGMODE
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    cerr&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entered into ff&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;//LOGIC
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#ifdef DEBUGMODE
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    cerr&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Exiting from ff&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
+&lt;span style=&#34;color:#75715e&#34;&gt;#endif
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally I have added the above lines in my CP template.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

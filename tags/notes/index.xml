@@ -50,8 +50,6 @@ Scope of let is block {}&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;To know the type of a variable:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Object:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Arrays:
 In js, arrays functions as stack,queue and lists. Addressing uses zero-based indices. Arrays in JS
 are sparse, meaning that we can also assign variables to random locations even though prev cells
@@ -62,11 +60,13 @@ were undefined. It can have elements with different types.&lt;/p&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;undefined&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;undefined&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;];
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Stacks,Queues,Lists:&lt;/p&gt;
 &lt;p&gt;Arrays has &lt;code&gt;push&lt;/code&gt;,&lt;code&gt;pop&lt;/code&gt;,&lt;code&gt;shift&lt;/code&gt;and&lt;code&gt;unshift&lt;/code&gt; methods.&lt;/p&gt;
-&lt;p&gt;push -&amp;gt; inserts at the end of the array
-pop  -&amp;gt; removes at the end of the array
-shift -&amp;gt; inserts at the start of the array
-unshift -&amp;gt; removes at the start of the array&lt;/p&gt;
-&lt;p&gt;By using push,pop or shift,unshift arrays can behave as stacks
+&lt;ul&gt;
+&lt;li&gt;push -&amp;gt; inserts at the end of the array&lt;/li&gt;
+&lt;li&gt;pop  -&amp;gt; removes at the end of the array&lt;/li&gt;
+&lt;li&gt;shift -&amp;gt; inserts at the start of the array&lt;/li&gt;
+&lt;li&gt;unshift -&amp;gt; removes at the start of the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By using push,pop or shift,unshift arrays can behave as stacks.
 With push,shift or unshift,pop it can behave as queues&lt;/p&gt;
 &lt;p&gt;Splicing:&lt;/p&gt;
 &lt;p&gt;In JS, we can split the array into two by using splice&lt;/p&gt;
@@ -115,7 +115,13 @@ JS also supports combination of above operators with equal i.e +=, -=, *=, /=,%=
         &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;I don&amp;#39;t know what your rank is.&amp;#34;&lt;/span&gt;);
         &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Loops:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;lt;&lt;em&gt;To Be Continued&lt;/em&gt;&amp;gt;&lt;/p&gt;
+&lt;p&gt;Loops:&lt;/p&gt;
+&lt;p&gt;Object:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Async-Await:&lt;/p&gt;
+&lt;p&gt;promises &amp;hellip;etc&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.learn-js.org/&#34;&gt;src&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     
