@@ -52,9 +52,7 @@ y types as int.&lt;/li&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Macros for development:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define DEBUG(str) (cout&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;str&amp;lt;&amp;lt;&amp;#34;\n&amp;#34;&amp;lt;&amp;lt;endl)
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ff&lt;/span&gt;(){
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ff&lt;/span&gt;(){
 
 &lt;span style=&#34;color:#75715e&#34;&gt;#ifdef DEBUGMODE
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    cerr&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Entered into ff&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;endl;
@@ -186,6 +184,23 @@ JS also supports combination of above operators with equal i.e +=, -=, *=, /=,%=
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Async-Await:&lt;/p&gt;
 &lt;p&gt;promises &amp;hellip;etc&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.learn-js.org/&#34;&gt;src&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Ldflags</title>
+      <link>https://purush7.github.io/posts/ldflags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://purush7.github.io/posts/ldflags/</guid>
+      <description>Hey,
+In my previous post. I have talked about macros in cpp and it&amp;rsquo;s uses. I started to learn and using it for the projects. So, I thought of implementing it and I found macros isn&amp;rsquo;t supported in Go :(.
+Instead it has ldflags</description>
+      <content>&lt;p&gt;Hey,&lt;/p&gt;
+&lt;p&gt;In my previous &lt;a href=&#34;&#34;&gt;post&lt;/a&gt;. I have talked about macros in cpp and it&amp;rsquo;s uses. I started to learn
+and using it for the projects. So, I thought of implementing it and I found macros isn&amp;rsquo;t
+supported in Go :(.&lt;/p&gt;
+&lt;p&gt;Instead it has &lt;code&gt;ldflags&lt;/code&gt;&lt;/p&gt;
 </content>
     </item>
     
