@@ -6,7 +6,176 @@
     <description>Recent content on purush7</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jul 2022 15:06:14 +0530</lastBuildDate><atom:link href="https://purush7.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Feb 2023 23:36:27 +0530</lastBuildDate><atom:link href="https://purush7.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git_stash_reflog</title>
+      <link>https://purush7.github.io/posts/git_stash_reflog/</link>
+      <pubDate>Thu, 09 Feb 2023 23:36:27 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/git_stash_reflog/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Merging and rebasing</title>
+      <link>https://purush7.github.io/posts/git_merge_rebase/</link>
+      <pubDate>Thu, 09 Feb 2023 16:48:20 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/git_merge_rebase/</guid>
+      <description>Today,
+I will be explaining git rebase, git merge, purpose for these and when to use these.
+Both git rebase and git merge are used to integrate the changes of one branch to another branch
+let&amp;rsquo;s suppose this is the scenario:
+Feature &amp;mdash;- e-f-g | Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d
+Now to have c,d commits in feature branch, we have 2 options
+  Merge
+git checkout feature &amp;amp;&amp;amp; git merge main This makes a new commit in feature branch let suppose it is g&#39; which contains main commits c and d.</description>
+      <content>&lt;p&gt;Today,&lt;/p&gt;
+&lt;p&gt;I will be explaining git rebase, git merge, purpose for these and when to use these.&lt;/p&gt;
+&lt;p&gt;Both &lt;code&gt;git rebase&lt;/code&gt; and &lt;code&gt;git merge&lt;/code&gt; are used to integrate the changes of one branch to another branch&lt;/p&gt;
+&lt;p&gt;let&amp;rsquo;s suppose this is the scenario:&lt;/p&gt;
+&lt;p&gt;Feature     &amp;mdash;- e-f-g
+|
+Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
+&lt;p&gt;Now to have c,d commits in &lt;code&gt;feature&lt;/code&gt; branch, we have 2 options&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Merge&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git checkout feature &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git merge main 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This makes a new commit in &lt;code&gt;feature&lt;/code&gt; branch let suppose it is &lt;code&gt;g&#39;&lt;/code&gt; which contains main commits &lt;code&gt;c&lt;/code&gt; and &lt;code&gt;d&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Feature     &amp;mdash;- e-f-g-g&#39;
+|
+Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
+&lt;p&gt;The above case is the &lt;code&gt;recursive&lt;/code&gt; merge. If suppose there isn&amp;rsquo;t commits &lt;code&gt;e&lt;/code&gt; and &lt;code&gt;f&lt;/code&gt;, then merge just need to add commits &lt;code&gt;c&lt;/code&gt; and &lt;code&gt;d&lt;/code&gt;.
+The latter case is called the &lt;code&gt;fast-fowarded&lt;/code&gt; where the commit history is linear and it doesn&amp;rsquo;t need to add a commit. In this case&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git merge main // won&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;t create a new commit but &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; we use &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;--no-ff&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;then&lt;/span&gt; it will create a new commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;to-reset-merge&#34;&gt;To reset merge:&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git reset --hard HEAD~1&lt;/code&gt; this command can be used to reset merge if the  last commit is merge commit
+or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;code&gt;git reset --hard #commit&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rebase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git checkout feature &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git rebase main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This adds all the commits in main and then adds the latest commits of feature. Basically changes the parent of first different commit in the &lt;code&gt;feature&lt;/code&gt; branch and child of the last &lt;code&gt;main&lt;/code&gt; commit.&lt;/p&gt;
+&lt;p&gt;Feature           e-f-g
+|
+Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
+&lt;p&gt;There if a force flag for rebase if we want to copy the existing feature commits to new commits. (Better avoid it, unnecessary)&lt;/p&gt;
+&lt;h3 id=&#34;to-reset-the-rebase&#34;&gt;To reset the rebase:&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git reset --hard ORIG_HEAD&lt;/code&gt; Rebase stores the old state before rebase in &lt;code&gt;ORIG_HEAD&lt;/code&gt;
+or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;code&gt;git reset --hard #commit&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pro&amp;rsquo;s and Con&amp;rsquo;s of each:&lt;/p&gt;
+&lt;p&gt;Rebase pros are the commit history will be linear so all the commits of a feature will be present at one place.&lt;/p&gt;
+&lt;p&gt;Cons are as the commit history changes, the will be problem of reaching a commit and the resolving conflicts will be a problem&lt;/p&gt;
+&lt;p&gt;Merge pros and cons are the vice-versa of rebase.&lt;/p&gt;
+&lt;p&gt;So rebase will be useful you are IC(individual contributor) and merge will be useful if there are many people.&lt;/p&gt;
+&lt;h2 id=&#34;squash&#34;&gt;Squash:&lt;/h2&gt;
+&lt;p&gt;For squashing, you can use &lt;code&gt;git rebase -i HEAD~3&lt;/code&gt; and have s for the commits to squash it.&lt;/p&gt;
+&lt;h2 id=&#34;best-solution&#34;&gt;Best solution:&lt;/h2&gt;
+&lt;p&gt;It is best to use rebase on the &lt;code&gt;feature&lt;/code&gt; branch (i.e while getting the latest changes) and use merge in &lt;code&gt;main&lt;/code&gt; branch&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use rebase while pulling the &lt;code&gt;main&lt;/code&gt; changes into &lt;code&gt;feature&lt;/code&gt; branch.&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;git config --add branch.master.mergeoptions --ff-only&lt;/code&gt; or &lt;code&gt;git config --add branch.main.mergeoptions --ff-only&lt;/code&gt; and squash the feature commits before merge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here everyone/branch should pull latest changes using &lt;code&gt;rebase&lt;/code&gt;. There will be many conflicts if some uses &lt;code&gt;merge&lt;/code&gt; and others uses &lt;code&gt;rebase&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Blogs</title>
+      <link>https://purush7.github.io/posts/blogs/</link>
+      <pubDate>Sun, 29 Jan 2023 23:17:40 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/blogs/</guid>
+      <description>https://www.jerf.org/iri/post/2930/</description>
+      <content>&lt;p&gt;&lt;a href=&#34;https://www.jerf.org/iri/post/2930/&#34;&gt;https://www.jerf.org/iri/post/2930/&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://purush7.github.io/posts/golang/</link>
+      <pubDate>Sun, 29 Jan 2023 22:59:10 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/golang/</guid>
+      <description>what is cgo
+channels?
+possible errors in golang?
+datarace
+go routine memory leak
+using global variables in go routines
+go vs java (https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two)
+memory consumption of go vs java vs cpp vs c
+profiling in go
+reflection in java vs go (reflect package)
+how reflect package works in go and why it is time consuming
+how go runtime works? and data structure implementation in go?
+how go embed works?
+what is dependecy injection</description>
+      <content>&lt;p&gt;what is cgo&lt;/p&gt;
+&lt;p&gt;channels?&lt;/p&gt;
+&lt;p&gt;possible errors in golang?&lt;/p&gt;
+&lt;p&gt;datarace&lt;/p&gt;
+&lt;p&gt;go routine memory leak&lt;/p&gt;
+&lt;p&gt;using global variables in go routines&lt;/p&gt;
+&lt;p&gt;go vs java (&lt;a href=&#34;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&#34;&gt;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;memory consumption of go vs java vs cpp vs c&lt;/p&gt;
+&lt;p&gt;profiling in go&lt;/p&gt;
+&lt;p&gt;reflection in java vs go (reflect package)&lt;/p&gt;
+&lt;p&gt;how reflect package works in go and why it is time consuming&lt;/p&gt;
+&lt;p&gt;how go runtime works? and data structure implementation in go?&lt;/p&gt;
+&lt;p&gt;how go embed works?&lt;/p&gt;
+&lt;p&gt;what is dependecy injection&lt;/p&gt;
+&lt;p&gt;how the Go code uses the memory, file system, and other resources.?&lt;/p&gt;
+&lt;p&gt;streams in java vs go ?&lt;/p&gt;
+&lt;p&gt;Simple and elegant concurrency. Go has a powerful model of concurrency called “communicating sequential processes” or CSP.?&lt;/p&gt;
+&lt;p&gt;Go uses an n-to-m profiler which allows m concurrent executions to happen in n system threads. ?&lt;/p&gt;
+&lt;p&gt;shared memory in golang? why we should avoid it?&lt;/p&gt;
+&lt;p&gt;GOMAXPROCS environment variable.?&lt;/p&gt;
+&lt;p&gt;By default, the number of processes is equal to the number of cores.?
+sync package in go?&lt;/p&gt;
+&lt;p&gt;Package sync also provides a structure for concurrent map implementation, mutexes, condition variables, and wait groups. Package “atomic” &lt;a href=&#34;https://golang.org/pkg/sync/atomic/&#34;&gt;https://golang.org/pkg/sync/atomic/&lt;/a&gt; additionally allows for concurrency safe conversion and math operations — essentially everything we need for making a concurrency ready code.?&lt;/p&gt;
+&lt;p&gt;Pointers. With pointers, Go allows for more control over how to allocate memory, garbage collector payload, and other interesting performance tweaks that are impossible with Java. Go feels like a more low-level language than Java and favors much easier and faster performance optimizations.?&lt;/p&gt;
+&lt;p&gt;uck typing. “If it walks like a duck and it quacks like a duck, then it must be a duck.” This saying holds true with Go: there is no need to define that a certain structure implements a given interface. If the structure has the methods with the same signatures in a given interface then it implements it. This is very helpful. As the client of a library, you can define any interfaces you need for external libraries structures. In Java, an Object has to explicitly declare that it implements the interface.&lt;/p&gt;
+&lt;p&gt;uck typing. “If it walks like a duck and it quacks like a duck, then it must be a duck.” This saying holds true with Go: there is no need to define that a certain structure implements a given interface. If the structure has the methods with the same signatures in a given interface then it implements it. This is very helpful. As the client of a library, you can define any interfaces you need for external libraries structures. In Java, an Object has to explicitly declare that it implements the interface.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&#34;&gt;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a&#34;&gt;https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gin Web framework
+Gorm: An ORM library for Go
+Go Mysql driver&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ignaciosuay.com/spring-boot-native-vs-go-a-performance-comparison/&#34;&gt;https://ignaciosuay.com/spring-boot-native-vs-go-a-performance-comparison/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;golang context, net,io,os,buffer packages&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Garbage_collector</title>
+      <link>https://purush7.github.io/posts/garbage_collector/</link>
+      <pubDate>Sun, 29 Jan 2023 22:57:26 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/garbage_collector/</guid>
+      <description>Weak Generational Hypothesis ? Stop-the-World (STW) pause ? GOGC variable which sets the initial garbage collection target percentage in golang?</description>
+      <content>&lt;p&gt;Weak Generational Hypothesis ?
+Stop-the-World (STW) pause ?
+GOGC variable which sets the initial garbage collection target percentage in golang?&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>https://purush7.github.io/posts/database/</link>
+      <pubDate>Sun, 29 Jan 2023 22:50:22 +0530</pubDate>
+      
+      <guid>https://purush7.github.io/posts/database/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
     <item>
       <title>Macros</title>
       <link>https://purush7.github.io/posts/macros/</link>

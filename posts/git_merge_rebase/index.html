@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Merging and rebasing :: purush7</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Today,
+I will be explaining git rebase, git merge, purpose for these and when to use these.
+Both git rebase and git merge are used to integrate the changes of one branch to another branch
+let&amp;rsquo;s suppose this is the scenario:
+Feature &amp;mdash;- e-f-g | Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d
+Now to have c,d commits in feature branch, we have 2 options
+  Merge
+git checkout feature &amp;amp;&amp;amp; git merge main This makes a new commit in feature branch let suppose it is g&#39; which contains main commits c and d." />
+<meta name="keywords" content="git, merge, rebase" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://purush7.github.io/posts/git_merge_rebase/" />
+
+
+
+
+<link rel="stylesheet" href="https://purush7.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://purush7.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://purush7.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://purush7.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Merging and rebasing">
+<meta property="og:description" content="Today,
+I will be explaining git rebase, git merge, purpose for these and when to use these.
+Both git rebase and git merge are used to integrate the changes of one branch to another branch
+let&amp;rsquo;s suppose this is the scenario:
+Feature &amp;mdash;- e-f-g | Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d
+Now to have c,d commits in feature branch, we have 2 options
+  Merge
+git checkout feature &amp;amp;&amp;amp; git merge main This makes a new commit in feature branch let suppose it is g&#39; which contains main commits c and d." />
+<meta property="og:url" content="https://purush7.github.io/posts/git_merge_rebase/" />
+<meta property="og:site_name" content="purush7" />
+
+  <meta property="og:image" content="https://purush7.github.io/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2023-02-09 16:48:20 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Home
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://purush7.github.io/posts/git_merge_rebase/">Merging and rebasing</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2023-02-09
+        
+      </span>
+    
+    
+      <span class="post-author">:: purush7</span>
+    
+    
+      <span class="post-reading-time">:: 3 min read (476 words)</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://purush7.github.io/tags/git/">git</a>&nbsp;
+    
+    #<a href="https://purush7.github.io/tags/merge/">merge</a>&nbsp;
+    
+    #<a href="https://purush7.github.io/tags/rebase/">rebase</a>&nbsp;
+    
+  </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Today,</p>
+<p>I will be explaining git rebase, git merge, purpose for these and when to use these.</p>
+<p>Both <code>git rebase</code> and <code>git merge</code> are used to integrate the changes of one branch to another branch</p>
+<p>let&rsquo;s suppose this is the scenario:</p>
+<p>Feature     &mdash;- e-f-g
+|
+Main -&gt; a-b&mdash;-c&ndash;d</p>
+<p>Now to have c,d commits in <code>feature</code> branch, we have 2 options</p>
+<ul>
+<li>
+<p>Merge</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git checkout feature <span style="color:#f92672">&amp;&amp;</span> git merge main 
+</code></pre></div><p>This makes a new commit in <code>feature</code> branch let suppose it is <code>g'</code> which contains main commits <code>c</code> and <code>d</code>.</p>
+<p>Feature     &mdash;- e-f-g-g'
+|
+Main -&gt; a-b&mdash;-c&ndash;d</p>
+<p>The above case is the <code>recursive</code> merge. If suppose there isn&rsquo;t commits <code>e</code> and <code>f</code>, then merge just need to add commits <code>c</code> and <code>d</code>.
+The latter case is called the <code>fast-fowarded</code> where the commit history is linear and it doesn&rsquo;t need to add a commit. In this case</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git merge main // won<span style="color:#960050;background-color:#1e0010">&#39;</span>t create a new commit but <span style="color:#66d9ef">if</span> we use <span style="color:#e6db74">`</span>--no-ff<span style="color:#e6db74">`</span> <span style="color:#66d9ef">then</span> it will create a new commit
+</code></pre></div></li>
+</ul>
+<h3 id="to-reset-merge">To reset merge:<a href="#to-reset-merge" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><code>git reset --hard HEAD~1</code> this command can be used to reset merge if the  last commit is merge commit
+or you can get the commit from <code>git reflog</code> and do <code>git reset --hard #commit</code></p>
+<ul>
+<li>Rebase</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git checkout feature <span style="color:#f92672">&amp;&amp;</span> git rebase main
+</code></pre></div><p>This adds all the commits in main and then adds the latest commits of feature. Basically changes the parent of first different commit in the <code>feature</code> branch and child of the last <code>main</code> commit.</p>
+<p>Feature           e-f-g
+|
+Main -&gt; a-b&mdash;-c&ndash;d</p>
+<p>There if a force flag for rebase if we want to copy the existing feature commits to new commits. (Better avoid it, unnecessary)</p>
+<h3 id="to-reset-the-rebase">To reset the rebase:<a href="#to-reset-the-rebase" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><code>git reset --hard ORIG_HEAD</code> Rebase stores the old state before rebase in <code>ORIG_HEAD</code>
+or you can get the commit from <code>git reflog</code> and do <code>git reset --hard #commit</code></p>
+<p>Pro&rsquo;s and Con&rsquo;s of each:</p>
+<p>Rebase pros are the commit history will be linear so all the commits of a feature will be present at one place.</p>
+<p>Cons are as the commit history changes, the will be problem of reaching a commit and the resolving conflicts will be a problem</p>
+<p>Merge pros and cons are the vice-versa of rebase.</p>
+<p>So rebase will be useful you are IC(individual contributor) and merge will be useful if there are many people.</p>
+<h2 id="squash">Squash:<a href="#squash" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>For squashing, you can use <code>git rebase -i HEAD~3</code> and have s for the commits to squash it.</p>
+<h2 id="best-solution">Best solution:<a href="#best-solution" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>It is best to use rebase on the <code>feature</code> branch (i.e while getting the latest changes) and use merge in <code>main</code> branch</p>
+<ul>
+<li>Use rebase while pulling the <code>main</code> changes into <code>feature</code> branch.</li>
+<li>Add <code>git config --add branch.master.mergeoptions --ff-only</code> or <code>git config --add branch.main.mergeoptions --ff-only</code> and squash the feature commits before merge</li>
+</ul>
+<blockquote>
+<p>Here everyone/branch should pull latest changes using <code>rebase</code>. There will be many conflicts if some uses <code>merge</code> and others uses <code>rebase</code>.</p>
+</blockquote>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://purush7.github.io/posts/git_stash_reflog/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Git_stash_reflog</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://purush7.github.io/posts/blogs/">
+                <span class="button__text">Blogs</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+  
+
+  
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://purush7.github.io/assets/main.js"></script>
+<script src="https://purush7.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

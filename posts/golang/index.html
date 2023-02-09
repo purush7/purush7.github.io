@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Golang :: purush7</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="what is cgo
+channels?
+possible errors in golang?
+datarace
+go routine memory leak
+using global variables in go routines
+go vs java (https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two)
+memory consumption of go vs java vs cpp vs c
+profiling in go
+reflection in java vs go (reflect package)
+how reflect package works in go and why it is time consuming
+how go runtime works? and data structure implementation in go?
+how go embed works?
+what is dependecy injection" />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://purush7.github.io/posts/golang/" />
+
+
+
+
+<link rel="stylesheet" href="https://purush7.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://purush7.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://purush7.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://purush7.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Golang">
+<meta property="og:description" content="what is cgo
+channels?
+possible errors in golang?
+datarace
+go routine memory leak
+using global variables in go routines
+go vs java (https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two)
+memory consumption of go vs java vs cpp vs c
+profiling in go
+reflection in java vs go (reflect package)
+how reflect package works in go and why it is time consuming
+how go runtime works? and data structure implementation in go?
+how go embed works?
+what is dependecy injection" />
+<meta property="og:url" content="https://purush7.github.io/posts/golang/" />
+<meta property="og:site_name" content="purush7" />
+
+  <meta property="og:image" content="https://purush7.github.io/">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2023-01-29 22:59:10 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Home
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://purush7.github.io/posts/golang/">Golang</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2023-01-29
+        
+      </span>
+    
+    
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://purush7.github.io/tags/"></a>&nbsp;
+    
+    #<a href="https://purush7.github.io/tags/"></a>&nbsp;
+    
+  </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>what is cgo</p>
+<p>channels?</p>
+<p>possible errors in golang?</p>
+<p>datarace</p>
+<p>go routine memory leak</p>
+<p>using global variables in go routines</p>
+<p>go vs java (<a href="https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two">https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two</a>)</p>
+<p>memory consumption of go vs java vs cpp vs c</p>
+<p>profiling in go</p>
+<p>reflection in java vs go (reflect package)</p>
+<p>how reflect package works in go and why it is time consuming</p>
+<p>how go runtime works? and data structure implementation in go?</p>
+<p>how go embed works?</p>
+<p>what is dependecy injection</p>
+<p>how the Go code uses the memory, file system, and other resources.?</p>
+<p>streams in java vs go ?</p>
+<p>Simple and elegant concurrency. Go has a powerful model of concurrency called “communicating sequential processes” or CSP.?</p>
+<p>Go uses an n-to-m profiler which allows m concurrent executions to happen in n system threads. ?</p>
+<p>shared memory in golang? why we should avoid it?</p>
+<p>GOMAXPROCS environment variable.?</p>
+<p>By default, the number of processes is equal to the number of cores.?
+sync package in go?</p>
+<p>Package sync also provides a structure for concurrent map implementation, mutexes, condition variables, and wait groups. Package “atomic” <a href="https://golang.org/pkg/sync/atomic/">https://golang.org/pkg/sync/atomic/</a> additionally allows for concurrency safe conversion and math operations — essentially everything we need for making a concurrency ready code.?</p>
+<p>Pointers. With pointers, Go allows for more control over how to allocate memory, garbage collector payload, and other interesting performance tweaks that are impossible with Java. Go feels like a more low-level language than Java and favors much easier and faster performance optimizations.?</p>
+<p>uck typing. “If it walks like a duck and it quacks like a duck, then it must be a duck.” This saying holds true with Go: there is no need to define that a certain structure implements a given interface. If the structure has the methods with the same signatures in a given interface then it implements it. This is very helpful. As the client of a library, you can define any interfaces you need for external libraries structures. In Java, an Object has to explicitly declare that it implements the interface.</p>
+<p>uck typing. “If it walks like a duck and it quacks like a duck, then it must be a duck.” This saying holds true with Go: there is no need to define that a certain structure implements a given interface. If the structure has the methods with the same signatures in a given interface then it implements it. This is very helpful. As the client of a library, you can define any interfaces you need for external libraries structures. In Java, an Object has to explicitly declare that it implements the interface.</p>
+<p><a href="https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two">https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two</a></p>
+<p><a href="https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a">https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a</a></p>
+<p>Gin Web framework
+Gorm: An ORM library for Go
+Go Mysql driver</p>
+<p><a href="https://ignaciosuay.com/spring-boot-native-vs-go-a-performance-comparison/">https://ignaciosuay.com/spring-boot-native-vs-go-a-performance-comparison/</a></p>
+<p>golang context, net,io,os,buffer packages</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://purush7.github.io/posts/blogs/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Blogs</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://purush7.github.io/posts/garbage_collector/">
+                <span class="button__text">Garbage_collector</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+  
+
+  
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2023 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://purush7.github.io/assets/main.js"></script>
+<script src="https://purush7.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
