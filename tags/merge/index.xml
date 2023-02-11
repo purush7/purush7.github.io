@@ -73,6 +73,7 @@ or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;co
 &lt;blockquote&gt;
 &lt;p&gt;Here everyone/branch should pull latest changes using &lt;code&gt;rebase&lt;/code&gt;. There will be many conflicts if some uses &lt;code&gt;merge&lt;/code&gt; and others uses &lt;code&gt;rebase&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/purush7/testing_git&#34;&gt;This repo&lt;/a&gt; has all the cases using &lt;code&gt;git merge&lt;/code&gt; and &lt;code&gt;git rebase&lt;/code&gt;. Use &lt;code&gt;git reflog&lt;/code&gt; and &lt;code&gt;git log --graph&lt;/code&gt; to understand the commit history&lt;/p&gt;
 </content>
     </item>
     
