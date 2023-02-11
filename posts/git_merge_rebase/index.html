@@ -146,7 +146,7 @@ git checkout feature &amp;amp;&amp;amp; git merge main This makes a new commit i
       <span class="post-author">:: purush7</span>
     
     
-      <span class="post-reading-time">:: 3 min read (500 words)</span>
+      <span class="post-reading-time">:: 3 min read (576 words)</span>
     
   </div>
 
@@ -196,13 +196,18 @@ or you can get the commit from <code>git reflog</code> and do <code>git reset --
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git checkout feature <span style="color:#f92672">&amp;&amp;</span> git rebase main
 </code></pre></div><p>This adds all the commits in main and then adds the latest commits of feature. Basically changes the parent of first different commit in the <code>feature</code> branch and child of the last <code>main</code> commit.</p>
-<p>Feature           e-f-g
+<p>Feature           e'-f'-g'
 |
 Main -&gt; a-b&mdash;-c&ndash;d</p>
-<p>There if a force flag for rebase if we want to copy the existing feature commits to new commits. (Better avoid it, unnecessary)</p>
 <h3 id="to-reset-the-rebase">To reset the rebase:<a href="#to-reset-the-rebase" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p><code>git reset --hard ORIG_HEAD</code> Rebase stores the old state before rebase in <code>ORIG_HEAD</code>
 or you can get the commit from <code>git reflog</code> and do <code>git reset --hard #commit</code></p>
+<p>Feature      &mdash;- e-f-g
+|
+Main -&gt; a-b&mdash;-c&ndash;d</p>
+<p>If <code>c</code> and <code>e</code> has same changes and the committer info is different basically if both the checksum is same then in <code>git rebase main feature</code>, the final history of <code>feature</code> will look like
+a-&gt;b-&gt;c-&gt;d-&gt;f-&gt;g. It skips the <code>e</code> in the feature branch.</p>
+<p>If <code>git rebase</code> doesn&rsquo;t take merge commits, then mention <code>-p</code> to take merge commits into consideration while rebasing</p>
 <p>Pro&rsquo;s and Con&rsquo;s of each:</p>
 <p>Rebase pros are the commit history will be linear so all the commits of a feature will be present at one place.</p>
 <p>Cons are as the commit history changes, the will be problem of reaching a commit and the resolving conflicts will be a problem</p>
@@ -217,8 +222,9 @@ or you can get the commit from <code>git reflog</code> and do <code>git reset --
 <li>Add <code>git config --add branch.master.mergeoptions --ff-only</code> or <code>git config --add branch.main.mergeoptions --ff-only</code> and squash the feature commits before merge</li>
 </ul>
 <blockquote>
-<p>Here everyone/branch should pull latest changes using <code>rebase</code>. There will be many conflicts if some uses <code>merge</code> and others uses <code>rebase</code>.</p>
+<p>You can get the best of both worlds: rebase local changes before pushing to clean up your work, but never rebase anything that you’ve pushed somewhere.</p>
 </blockquote>
+<p>There is <code>--onto</code> flag in <code>git rebase</code> which is much useful. In <code>git rebase --help</code>, it has been explained clearly. For real case scenario -&gt; <a href="https://stackoverflow.com/questions/51194261/git-rebase-with-merged-commits">https://stackoverflow.com/questions/51194261/git-rebase-with-merged-commits</a></p>
 <p><a href="https://github.com/purush7/testing_git">This repo</a> has all the cases using <code>git merge</code> and <code>git rebase</code>. Use <code>git reflog</code> and <code>git log --graph</code> to understand the commit history</p>
 
       </div></div>
@@ -232,17 +238,10 @@ or you can get the commit from <code>git reflog</code> and do <code>git reset --
     </div>
     <div class="pagination__buttons">
         
-        <span class="button previous">
-            <a href="https://purush7.github.io/posts/git_stash_reflog/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Git_stash_reflog</span>
-            </a>
-        </span>
-        
         
         <span class="button next">
-            <a href="https://purush7.github.io/posts/blogs/">
-                <span class="button__text">Blogs</span>
+            <a href="https://purush7.github.io/posts/macros/">
+                <span class="button__text">Macros</span>
                 <span class="button__icon">→</span>
             </a>
         </span>

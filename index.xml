@@ -6,17 +6,7 @@
     <description>Recent content on purush7</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Feb 2023 23:36:27 +0530</lastBuildDate><atom:link href="https://purush7.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Git_stash_reflog</title>
-      <link>https://purush7.github.io/posts/git_stash_reflog/</link>
-      <pubDate>Thu, 09 Feb 2023 23:36:27 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/git_stash_reflog/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
+    <lastBuildDate>Thu, 09 Feb 2023 16:48:20 +0530</lastBuildDate><atom:link href="https://purush7.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Merging and rebasing</title>
       <link>https://purush7.github.io/posts/git_merge_rebase/</link>
@@ -60,13 +50,18 @@ or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;co
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git checkout feature &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git rebase main
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This adds all the commits in main and then adds the latest commits of feature. Basically changes the parent of first different commit in the &lt;code&gt;feature&lt;/code&gt; branch and child of the last &lt;code&gt;main&lt;/code&gt; commit.&lt;/p&gt;
-&lt;p&gt;Feature           e-f-g
+&lt;p&gt;Feature           e&#39;-f&#39;-g&#39;
 |
 Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
-&lt;p&gt;There if a force flag for rebase if we want to copy the existing feature commits to new commits. (Better avoid it, unnecessary)&lt;/p&gt;
 &lt;h3 id=&#34;to-reset-the-rebase&#34;&gt;To reset the rebase:&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;git reset --hard ORIG_HEAD&lt;/code&gt; Rebase stores the old state before rebase in &lt;code&gt;ORIG_HEAD&lt;/code&gt;
 or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;code&gt;git reset --hard #commit&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Feature      &amp;mdash;- e-f-g
+|
+Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;c&lt;/code&gt; and &lt;code&gt;e&lt;/code&gt; has same changes and the committer info is different basically if both the checksum is same then in &lt;code&gt;git rebase main feature&lt;/code&gt;, the final history of &lt;code&gt;feature&lt;/code&gt; will look like
+a-&amp;gt;b-&amp;gt;c-&amp;gt;d-&amp;gt;f-&amp;gt;g. It skips the &lt;code&gt;e&lt;/code&gt; in the feature branch.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;git rebase&lt;/code&gt; doesn&amp;rsquo;t take merge commits, then mention &lt;code&gt;-p&lt;/code&gt; to take merge commits into consideration while rebasing&lt;/p&gt;
 &lt;p&gt;Pro&amp;rsquo;s and Con&amp;rsquo;s of each:&lt;/p&gt;
 &lt;p&gt;Rebase pros are the commit history will be linear so all the commits of a feature will be present at one place.&lt;/p&gt;
 &lt;p&gt;Cons are as the commit history changes, the will be problem of reaching a commit and the resolving conflicts will be a problem&lt;/p&gt;
@@ -81,100 +76,11 @@ or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;co
 &lt;li&gt;Add &lt;code&gt;git config --add branch.master.mergeoptions --ff-only&lt;/code&gt; or &lt;code&gt;git config --add branch.main.mergeoptions --ff-only&lt;/code&gt; and squash the feature commits before merge&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Here everyone/branch should pull latest changes using &lt;code&gt;rebase&lt;/code&gt;. There will be many conflicts if some uses &lt;code&gt;merge&lt;/code&gt; and others uses &lt;code&gt;rebase&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can get the best of both worlds: rebase local changes before pushing to clean up your work, but never rebase anything that you’ve pushed somewhere.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;There is &lt;code&gt;--onto&lt;/code&gt; flag in &lt;code&gt;git rebase&lt;/code&gt; which is much useful. In &lt;code&gt;git rebase --help&lt;/code&gt;, it has been explained clearly. For real case scenario -&amp;gt; &lt;a href=&#34;https://stackoverflow.com/questions/51194261/git-rebase-with-merged-commits&#34;&gt;https://stackoverflow.com/questions/51194261/git-rebase-with-merged-commits&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/purush7/testing_git&#34;&gt;This repo&lt;/a&gt; has all the cases using &lt;code&gt;git merge&lt;/code&gt; and &lt;code&gt;git rebase&lt;/code&gt;. Use &lt;code&gt;git reflog&lt;/code&gt; and &lt;code&gt;git log --graph&lt;/code&gt; to understand the commit history&lt;/p&gt;
 </content>
-    </item>
-    
-    <item>
-      <title>Blogs</title>
-      <link>https://purush7.github.io/posts/blogs/</link>
-      <pubDate>Sun, 29 Jan 2023 23:17:40 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/blogs/</guid>
-      <description>https://www.jerf.org/iri/post/2930/</description>
-      <content>&lt;p&gt;&lt;a href=&#34;https://www.jerf.org/iri/post/2930/&#34;&gt;https://www.jerf.org/iri/post/2930/&lt;/a&gt;&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://purush7.github.io/posts/golang/</link>
-      <pubDate>Sun, 29 Jan 2023 22:59:10 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/golang/</guid>
-      <description>what is cgo
-channels?
-possible errors in golang?
-datarace
-go routine memory leak
-using global variables in go routines
-go vs java (https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two)
-memory consumption of go vs java vs cpp vs c
-profiling in go
-reflection in java vs go (reflect package)
-how reflect package works in go and why it is time consuming
-how go runtime works? and data structure implementation in go?
-how go embed works?
-what is dependecy injection</description>
-      <content>&lt;p&gt;what is cgo&lt;/p&gt;
-&lt;p&gt;channels?&lt;/p&gt;
-&lt;p&gt;possible errors in golang?&lt;/p&gt;
-&lt;p&gt;datarace&lt;/p&gt;
-&lt;p&gt;go routine memory leak&lt;/p&gt;
-&lt;p&gt;using global variables in go routines&lt;/p&gt;
-&lt;p&gt;go vs java (&lt;a href=&#34;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&#34;&gt;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;memory consumption of go vs java vs cpp vs c&lt;/p&gt;
-&lt;p&gt;profiling in go&lt;/p&gt;
-&lt;p&gt;reflection in java vs go (reflect package)&lt;/p&gt;
-&lt;p&gt;how reflect package works in go and why it is time consuming&lt;/p&gt;
-&lt;p&gt;how go runtime works? and data structure implementation in go?&lt;/p&gt;
-&lt;p&gt;how go embed works?&lt;/p&gt;
-&lt;p&gt;what is dependecy injection&lt;/p&gt;
-&lt;p&gt;how the Go code uses the memory, file system, and other resources.?&lt;/p&gt;
-&lt;p&gt;streams in java vs go ?&lt;/p&gt;
-&lt;p&gt;Simple and elegant concurrency. Go has a powerful model of concurrency called “communicating sequential processes” or CSP.?&lt;/p&gt;
-&lt;p&gt;Go uses an n-to-m profiler which allows m concurrent executions to happen in n system threads. ?&lt;/p&gt;
-&lt;p&gt;shared memory in golang? why we should avoid it?&lt;/p&gt;
-&lt;p&gt;GOMAXPROCS environment variable.?&lt;/p&gt;
-&lt;p&gt;By default, the number of processes is equal to the number of cores.?
-sync package in go?&lt;/p&gt;
-&lt;p&gt;Package sync also provides a structure for concurrent map implementation, mutexes, condition variables, and wait groups. Package “atomic” &lt;a href=&#34;https://golang.org/pkg/sync/atomic/&#34;&gt;https://golang.org/pkg/sync/atomic/&lt;/a&gt; additionally allows for concurrency safe conversion and math operations — essentially everything we need for making a concurrency ready code.?&lt;/p&gt;
-&lt;p&gt;Pointers. With pointers, Go allows for more control over how to allocate memory, garbage collector payload, and other interesting performance tweaks that are impossible with Java. Go feels like a more low-level language than Java and favors much easier and faster performance optimizations.?&lt;/p&gt;
-&lt;p&gt;uck typing. “If it walks like a duck and it quacks like a duck, then it must be a duck.” This saying holds true with Go: there is no need to define that a certain structure implements a given interface. If the structure has the methods with the same signatures in a given interface then it implements it. This is very helpful. As the client of a library, you can define any interfaces you need for external libraries structures. In Java, an Object has to explicitly declare that it implements the interface.&lt;/p&gt;
-&lt;p&gt;uck typing. “If it walks like a duck and it quacks like a duck, then it must be a duck.” This saying holds true with Go: there is no need to define that a certain structure implements a given interface. If the structure has the methods with the same signatures in a given interface then it implements it. This is very helpful. As the client of a library, you can define any interfaces you need for external libraries structures. In Java, an Object has to explicitly declare that it implements the interface.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&#34;&gt;https://dzone.com/articles/when-to-use-go-vs-java-one-programmers-take-on-two&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a&#34;&gt;https://medium.com/@egonelbre/psychology-of-code-readability-d23b1ff1258a&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Gin Web framework
-Gorm: An ORM library for Go
-Go Mysql driver&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://ignaciosuay.com/spring-boot-native-vs-go-a-performance-comparison/&#34;&gt;https://ignaciosuay.com/spring-boot-native-vs-go-a-performance-comparison/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;golang context, net,io,os,buffer packages&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Garbage_collector</title>
-      <link>https://purush7.github.io/posts/garbage_collector/</link>
-      <pubDate>Sun, 29 Jan 2023 22:57:26 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/garbage_collector/</guid>
-      <description>Weak Generational Hypothesis ? Stop-the-World (STW) pause ? GOGC variable which sets the initial garbage collection target percentage in golang?</description>
-      <content>&lt;p&gt;Weak Generational Hypothesis ?
-Stop-the-World (STW) pause ?
-GOGC variable which sets the initial garbage collection target percentage in golang?&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Database</title>
-      <link>https://purush7.github.io/posts/database/</link>
-      <pubDate>Sun, 29 Jan 2023 22:50:22 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/database/</guid>
-      <description></description>
-      <content></content>
     </item>
     
     <item>
@@ -236,141 +142,6 @@ y types as int.&lt;/li&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;}
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Finally I have added the above lines in my CP template.&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Javascript_tutorial</title>
-      <link>https://purush7.github.io/posts/javascript_tutorial/</link>
-      <pubDate>Thu, 30 Jun 2022 13:54:41 +0530</pubDate>
-      
-      <guid>https://purush7.github.io/posts/javascript_tutorial/</guid>
-      <description>Javascript was only used in browsers to build interactive sites. Dahl build a cpp program which is present in chrome as v8 engine to run javascript and it is called as node
-To run js on browser browser-&amp;gt;inspect-&amp;gt;console
-To printout the statements
-console.log(&amp;#34;Hello&amp;#34;,&amp;#34;World&amp;#34;); The variables are created by var or let keyword Scope of var is functional Scope of let is block {}
-constants can be created by const keyword</description>
-      <content>&lt;p&gt;Javascript was only used in browsers to build interactive sites.
-Dahl build a cpp program which is present in chrome as v8 engine to run javascript and it is called
-as node&lt;/p&gt;
-&lt;p&gt;To run js on browser
-&lt;code&gt;browser-&amp;gt;inspect-&amp;gt;console&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;To printout the statements&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;World&amp;#34;&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The variables are created by &lt;code&gt;var&lt;/code&gt; or &lt;code&gt;let&lt;/code&gt; keyword
-Scope of var is functional
-Scope of let is block {}&lt;/p&gt;
-&lt;p&gt;constants can be created by &lt;code&gt;const&lt;/code&gt; keyword&lt;/p&gt;
-&lt;p&gt;Types of variables:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Primitive Types
-&lt;ul&gt;
-&lt;li&gt;String&lt;/li&gt;
-&lt;li&gt;Number&lt;/li&gt;
-&lt;li&gt;Boolean&lt;/li&gt;
-&lt;li&gt;null (to mark the variable as empty)&lt;/li&gt;
-&lt;li&gt;undefined (default type if the value of variable isn&amp;rsquo;t defined)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Reference Types
-&lt;ul&gt;
-&lt;li&gt;Object&lt;/li&gt;
-&lt;li&gt;Array&lt;/li&gt;
-&lt;li&gt;Functions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To know the type of a variable:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;typeof&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;color&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Arrays:
-In js, arrays functions as stack,queue and lists. Addressing uses zero-based indices. Arrays in JS
-are sparse, meaning that we can also assign variables to random locations even though prev cells
-were undefined. It can have elements with different types.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;myArray&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;];
-&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Array(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;);
-&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;myArray&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]);
-&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;undefined&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;undefined&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Stacks,Queues,Lists:&lt;/p&gt;
-&lt;p&gt;Arrays has &lt;code&gt;push&lt;/code&gt;,&lt;code&gt;pop&lt;/code&gt;,&lt;code&gt;shift&lt;/code&gt;and&lt;code&gt;unshift&lt;/code&gt; methods.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;push -&amp;gt; inserts at the end of the array&lt;/li&gt;
-&lt;li&gt;pop  -&amp;gt; removes at the end of the array&lt;/li&gt;
-&lt;li&gt;shift -&amp;gt; inserts at the start of the array&lt;/li&gt;
-&lt;li&gt;unshift -&amp;gt; removes at the start of the array&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;By using push,pop or shift,unshift arrays can behave as stacks.
-With push,shift or unshift,pop it can behave as queues&lt;/p&gt;
-&lt;p&gt;Splicing:&lt;/p&gt;
-&lt;p&gt;In JS, we can split the array into two by using splice&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;,,&lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;];
-&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;child&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;splice&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// startingIndex, length of child array
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;child&lt;/span&gt;);
-&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;arr&lt;/span&gt;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Operators:&lt;/p&gt;
-&lt;p&gt;Addition operator (+):
-It is used to add numbers and also for concatenation of strings.
-If + is used in b/w string and other data type, then other data type is converted into string
-&lt;code&gt;js var a =1,b=2; var c = a=b; var name = &amp;quot;John&amp;quot;; console.log(&amp;quot;Hello &amp;quot;+name); //Hello John console.log(&amp;quot;hey &amp;quot;+34); // hey 34&lt;/code&gt;
-Similarly -,*,/,% are for subtraction, multiplication, division and modulus
-JS also supports combination of above operators with equal i.e +=, -=, *=, /=,%=&lt;/p&gt;
-&lt;p&gt;JS has &lt;code&gt;Math&lt;/code&gt; module which contains
--   Math.abs (absolute value)
--   Math.exp (calculates e to the power)
--   Math.pow(x,y) (calculates the result of x to the power of y)
--   Math.floor removes the fraction part from the number
--   Math.random() will give a random number x where 0&amp;lt;=x&amp;lt;1&lt;/p&gt;
-&lt;p&gt;Conditions:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;){
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);
-} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
-    &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;);
-}
-
-&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;//true
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;//false compares types along with the values (strict comparision)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;comparision: ==, ===, &amp;gt;,&amp;lt;,!,||,&amp;amp;&amp;amp;&lt;/p&gt;
-&lt;p&gt;Switch:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rank&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Commander&amp;#34;&lt;/span&gt;;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;switch&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;rank&lt;/span&gt;)
-{
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Private&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sergeant&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You are not authorized.&amp;#34;&lt;/span&gt;);
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Commander&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello commander! what can I do for you today?&amp;#34;&lt;/span&gt;);
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Captain&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello captain! I will do anything you wish.&amp;#34;&lt;/span&gt;);
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
-        &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;I don&amp;#39;t know what your rank is.&amp;#34;&lt;/span&gt;);
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&amp;lt;&lt;em&gt;To Be Continued&lt;/em&gt;&amp;gt;&lt;/p&gt;
-&lt;p&gt;Loops:&lt;/p&gt;
-&lt;p&gt;Object:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Async-Await:&lt;/p&gt;
-&lt;p&gt;promises &amp;hellip;etc&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.learn-js.org/&#34;&gt;src&lt;/a&gt;&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Ldflags</title>
-      <link>https://purush7.github.io/posts/ldflags/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://purush7.github.io/posts/ldflags/</guid>
-      <description>Hey,
-In my previous post. I have talked about macros in cpp and it&amp;rsquo;s uses. I started to learn and using it for the projects. So, I thought of implementing it and I found macros isn&amp;rsquo;t supported in Go :(.
-Instead it has ldflags</description>
-      <content>&lt;p&gt;Hey,&lt;/p&gt;
-&lt;p&gt;In my previous &lt;a href=&#34;&#34;&gt;post&lt;/a&gt;. I have talked about macros in cpp and it&amp;rsquo;s uses. I started to learn
-and using it for the projects. So, I thought of implementing it and I found macros isn&amp;rsquo;t
-supported in Go :(.&lt;/p&gt;
-&lt;p&gt;Instead it has &lt;code&gt;ldflags&lt;/code&gt;&lt;/p&gt;
 </content>
     </item>
     

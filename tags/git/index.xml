@@ -50,13 +50,18 @@ or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;co
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git checkout feature &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git rebase main
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This adds all the commits in main and then adds the latest commits of feature. Basically changes the parent of first different commit in the &lt;code&gt;feature&lt;/code&gt; branch and child of the last &lt;code&gt;main&lt;/code&gt; commit.&lt;/p&gt;
-&lt;p&gt;Feature           e-f-g
+&lt;p&gt;Feature           e&#39;-f&#39;-g&#39;
 |
 Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
-&lt;p&gt;There if a force flag for rebase if we want to copy the existing feature commits to new commits. (Better avoid it, unnecessary)&lt;/p&gt;
 &lt;h3 id=&#34;to-reset-the-rebase&#34;&gt;To reset the rebase:&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;git reset --hard ORIG_HEAD&lt;/code&gt; Rebase stores the old state before rebase in &lt;code&gt;ORIG_HEAD&lt;/code&gt;
 or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;code&gt;git reset --hard #commit&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Feature      &amp;mdash;- e-f-g
+|
+Main -&amp;gt; a-b&amp;mdash;-c&amp;ndash;d&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;c&lt;/code&gt; and &lt;code&gt;e&lt;/code&gt; has same changes and the committer info is different basically if both the checksum is same then in &lt;code&gt;git rebase main feature&lt;/code&gt;, the final history of &lt;code&gt;feature&lt;/code&gt; will look like
+a-&amp;gt;b-&amp;gt;c-&amp;gt;d-&amp;gt;f-&amp;gt;g. It skips the &lt;code&gt;e&lt;/code&gt; in the feature branch.&lt;/p&gt;
+&lt;p&gt;If &lt;code&gt;git rebase&lt;/code&gt; doesn&amp;rsquo;t take merge commits, then mention &lt;code&gt;-p&lt;/code&gt; to take merge commits into consideration while rebasing&lt;/p&gt;
 &lt;p&gt;Pro&amp;rsquo;s and Con&amp;rsquo;s of each:&lt;/p&gt;
 &lt;p&gt;Rebase pros are the commit history will be linear so all the commits of a feature will be present at one place.&lt;/p&gt;
 &lt;p&gt;Cons are as the commit history changes, the will be problem of reaching a commit and the resolving conflicts will be a problem&lt;/p&gt;
@@ -71,8 +76,9 @@ or you can get the commit from &lt;code&gt;git reflog&lt;/code&gt; and do &lt;co
 &lt;li&gt;Add &lt;code&gt;git config --add branch.master.mergeoptions --ff-only&lt;/code&gt; or &lt;code&gt;git config --add branch.main.mergeoptions --ff-only&lt;/code&gt; and squash the feature commits before merge&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Here everyone/branch should pull latest changes using &lt;code&gt;rebase&lt;/code&gt;. There will be many conflicts if some uses &lt;code&gt;merge&lt;/code&gt; and others uses &lt;code&gt;rebase&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can get the best of both worlds: rebase local changes before pushing to clean up your work, but never rebase anything that you’ve pushed somewhere.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;There is &lt;code&gt;--onto&lt;/code&gt; flag in &lt;code&gt;git rebase&lt;/code&gt; which is much useful. In &lt;code&gt;git rebase --help&lt;/code&gt;, it has been explained clearly. For real case scenario -&amp;gt; &lt;a href=&#34;https://stackoverflow.com/questions/51194261/git-rebase-with-merged-commits&#34;&gt;https://stackoverflow.com/questions/51194261/git-rebase-with-merged-commits&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/purush7/testing_git&#34;&gt;This repo&lt;/a&gt; has all the cases using &lt;code&gt;git merge&lt;/code&gt; and &lt;code&gt;git rebase&lt;/code&gt;. Use &lt;code&gt;git reflog&lt;/code&gt; and &lt;code&gt;git log --graph&lt;/code&gt; to understand the commit history&lt;/p&gt;
 </content>
     </item>
